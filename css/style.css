@@ -10045,3 +10045,33 @@ a.text-dark:hover, a.text-dark:focus {
     visibility: visible;
     opacity: 1;
 }
+
+.submenu-container {
+  max-width: 60%; /* O el ancho máximo que desees */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submenu-row {
+  margin-top: 1%;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: stretch; /* Asegura que todos los elementos en la fila se estiren a la misma altura */
+}
+
+.submenu-block {
+  min-height: 250px; /* Ajusta este valor según la altura deseada para tus bloques */
+  display: flex; /* Convierte el contenido interno en un contenedor flex */
+  flex-direction: column; /* Apila el icono y el texto verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente dentro del bloque */
+  align-items: center; /* Centra el contenido horizontalmente dentro del bloque */
+  text-align: center; /* Asegura que el texto esté centrado si se ajusta */
+  padding: 30px; /* Mantiene tu espaciado existente */
+  box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+}
+
+/* Opcional: Ajustes para pantallas más pequeñas si es necesario */
+@media (max-width: 767.98px) {
+  .submenu-block {
+    min-height: 120px; /* Una altura ligeramente menor para dispositivos móviles */
+  }
+}
