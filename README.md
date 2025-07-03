@@ -22,9 +22,9 @@ Para ejecutar el proyecto en tu entorno local:
 
 ```bash
 # 1. Clona este repositorio
-git clone 
+git clone https://github.com/SuperarseTics/landing_frontend_superarse.git
 
 # 2. Accede a la carpeta del proyecto
-cd [nombre-del-repo]
+cd landing_frontend_superarse
 
 # 3. Abre el archivo index.html en tu navegador
