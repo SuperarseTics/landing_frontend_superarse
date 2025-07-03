@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
+    <title>Normativas Generales</title>
+
+    <!-- Favicon -->
+    <link href="/assets/logos/superarse_gris.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Flaticon Font -->
+    <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link
+      href="/lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link href="/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/js/main.js" />
+  </head>
+  <body>
+    <div data-include="/modules/content/header.html"></div>
+
+    <div class="container-fluid py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <p class="section-title pr-5">
+              <span class="pr-2">Marco Regulatorio Integral</span>
+            </p>
+            <h1 class="mb-4">Nuestras Normativas Generales</h1>
+
+            <div>
+              <p>
+                Las normativas generales del Instituto Superior Tecnológico
+                Superarse (ISTS) comprenden el conjunto de disposiciones y
+                regulaciones de carácter amplio que complementan nuestros
+                reglamentos y códigos específicos. Estas normativas establecen
+                los lineamientos fundamentales para diversas áreas de la gestión
+                institucional y la interacción de la comunidad.
+              </p>
+              <p>
+                Este documento es esencial para asegurar la coherencia en la
+                aplicación de nuestras políticas, promover la transparencia y
+                garantizar que todas las operaciones y actividades del ISTS se
+                desarrollen dentro de un marco legal y ético sólido.
+              </p>
+              <p>
+                Le invitamos a consultar este documento clave para entender el
+                contexto regulatorio que sustenta nuestro compromiso con la
+                calidad y la excelencia.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center h-100 p-4 border rounded"
+            >
+              <h3 class="mb-4 text-center">Ver el Documento de Normativas</h3>
+              <p class="text-center">
+                Descarga o visualiza el documento completo de nuestras
+                Normativas Generales:
+              </p>
+              <a
+                href="/assets/modules/Institucioin/normativa/docs/NORMATIVA DE SELECCION DEL PERSONAL ACADEMICO_Superarse.pdf"
+                target="_blank"
+                class="btn btn-primary mt-3 py-3 px-5"
+              >
+                <i class="fa fa-file-alt mr-2"></i> Descargar Normativas PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-include="/modules/content/footer.html"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/main.js"></script>
+
+    <script>
+      function includeHTML() {
+        const elements = document.querySelectorAll("[data-include]");
+        elements.forEach((el) => {
+          const file = el.getAttribute("data-include");
+          fetch(file)
+            .then((response) => {
+              if (response.ok) return response.text();
+              else throw new Error("Archivo no encontrado");
+            })
+            .then((data) => {
+              el.innerHTML = data;
+            })
+            .catch((error) => {
+              el.innerHTML = "<p>Error al cargar " + file + "</p>";
+            });
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", includeHTML);
+    </script>
+  </body>
+</html>
