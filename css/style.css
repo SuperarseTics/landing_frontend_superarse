@@ -54,6 +54,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 body {
+
   margin: 0;
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
@@ -62,6 +63,24 @@ body {
   color: #666666;
   text-align: left;
   background-color: #fff;
+}
+
+.navbar:first-of-type {
+    z-index: 1030;
+}
+
+.navbar:nth-of-type(2) {
+    z-index: 1020;
+}
+
+
+@media (max-width: 991.98px) {
+    .navbar:nth-of-type(2) {
+        top: 0;
+    }
+    body {
+        padding-top: 80px;
+    }
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
